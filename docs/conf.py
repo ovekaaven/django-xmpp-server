@@ -160,7 +160,7 @@ texinfo_documents = [
 # Autodoc customizations
 
 autodoc_member_order = 'bysource'
-autodoc_mock_imports = ['django']
+autodoc_mock_imports = ['django', 'channels']
 add_module_names = False
 
 from sphinx.ext import autodoc
