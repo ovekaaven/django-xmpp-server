@@ -3,6 +3,10 @@
 docs/_build
 docs/.doctrees
 .idea
+build
+*.egg*
+
+# sample project
 env
 *.pem
 db.sqlite3
