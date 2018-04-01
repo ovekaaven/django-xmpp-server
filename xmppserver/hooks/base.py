@@ -358,19 +358,6 @@ class BaseRosterHook(object):
         """
         return None
 
-    @staticmethod
-    def user_deleted(username):
-        """
-        Delete roster data belonging to a deleted Django user.
-
-        This method must be synchronous and static. It is called
-        from a Django signal receiver.
-
-        :param username: XMPP username
-        :return:
-        """
-        pass
-
 class BaseSessionHook(object):
     """
     These hooks have type 'session', and hook instances are available as
@@ -491,18 +478,5 @@ class BaseSessionHook(object):
         seems to have crashed.
 
         :param JID jid: Full JID
-        """
-        pass
-
-    @staticmethod
-    def user_deleted(username):
-        """
-        Delete session data belonging to a deleted Django user.
-
-        This method must be synchronous and static. It is called
-        from a Django signal receiver.
-
-        :param username: XMPP username
-        :return:
         """
         pass
