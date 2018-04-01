@@ -1,0 +1,12 @@
+*~
+*.pyc
+docs/_build
+docs/.doctrees
+.idea
+env
+*.pem
+db.sqlite3
+
+# symlinks I use for testing
+example/chatbox/channels
+example/chatbox/xmppserver

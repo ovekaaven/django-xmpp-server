@@ -1,0 +1,45 @@
+{% load xmpp %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>XMPP Demo</title>
+
+        <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.conversejs.org/css/converse.min.css">
+        <script src="https://cdn.conversejs.org/dist/converse.min.js"></script>
+    </head>
+
+    <body>
+        <script src="//code.jquery.com/jquery.min.js"></script>
+        <script>
+            converse.initialize({
+                bosh_service_url: '{% xmpp_bosh_url %}',
+                websocket_url: '{% xmpp_websocket_url %}',
+                prebind_url: '{% xmpp_prebind_url %}',
+                credentials_url: '{% xmpp_credentials_url %}',
+                connection_options: { 'protocol': window.WebSocket ? 'wss' : 'https' },
+                authentication: window.WebSocket ? 'login' : 'prebind',
+                auto_login: true,
+                auto_reconnect: true,
+                allow_chat_pending_contacts: true,
+                allow_contact_removal: true,
+                allow_contact_requests: true,
+                allow_muc: true,
+                allow_non_roster_messaging: true,
+                allow_registration: true,
+                auto_away: 60,
+                debug: true,
+                forward_messages: true,
+                hide_muc_server: true,
+                jid: '{% xmpp_jid %}',
+                keepalive: false,
+                locked_domain: '{% xmpp_domain %}',
+                registration_domain: '{% xmpp_domain %}',
+                message_carbons: true,
+                show_controlbox_by_default: true,
+                use_vcards: true,
+                view_mode: 'overlayed'
+            });
+        </script>
+    </body>
+</html>
