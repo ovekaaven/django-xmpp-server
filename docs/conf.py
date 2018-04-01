@@ -222,3 +222,8 @@ class FlatClassDocumenter(autodoc.ClassDocumenter):
 
 def setup(app):
     app.add_autodocumenter(FlatClassDocumenter)
+
+    # monkeypatch to fix 'bysource' sorting of async methods
+    # in Sphinx 1.7.x
+    from sphinx.pycode.parser import VariableCommentPicker as picker
+    picker.visit_AsyncFunctionDef = picker.visit_FunctionDef
