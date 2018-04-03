@@ -168,7 +168,9 @@ class Roster(object):
         new_values = await self.stream.roster_hook.update_contact(self.stream.boundjid,
                                                                   jid, values)
         if new_values is None:
-            raise XMPPError('item-not-found')
+            # If the roster hook won't add the contact,
+            # tell the client that it's removed
+            new_values = {'subscription': 'remove'}
         return new_values
 
     async def _remove_contact(self, jid):
