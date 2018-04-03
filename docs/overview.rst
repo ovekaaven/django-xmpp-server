@@ -22,8 +22,6 @@ Features
   - Plain password
   - Anonymous
 
-- Fully featured example project.
-
 - XMPP extensions supported so far:
 
   - XEP-0030 Service Discovery

@@ -19,7 +19,7 @@ xmpp_websocket_url
     Uses the `XMPP_WEBSOCKETS_URL` configuration option if set, otherwise
     deduces it from your project's URLconf.
 
-    Note that URL may be partial, meaning it may not contain a protocol.
+    Note that the URL may be partial, meaning it may not contain a protocol.
     If possible, you should use a different way of telling your web client
     that it should use the WebSockets protocol. Some web clients have
     connection options you can set for this.

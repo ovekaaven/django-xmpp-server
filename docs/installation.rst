@@ -70,7 +70,7 @@ Add the appropriate entries to your project's ``routing.py``, for example::
 Depending on your use case, you may also need to add the xmppserver
 URLconf to your project's ``urls.py``::
 
-    path('chat/', include('xmppserver.urls')),
+    url(r'^chat/', include('xmppserver.urls')),
 
 Post-installation
 -----------------
@@ -78,3 +78,10 @@ If you've installed the optional components, then you will need to run
 a migration::
 
     ./manage.py migrate
+
+Example project
+---------------
+If you want an example project to get you started, or just for testing,
+you can find the 'chatbox' example in the source code on GitHub:
+
+https://github.com/ovekaaven/django-xmpp-server
