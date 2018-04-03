@@ -188,5 +188,5 @@ XMPP_ALLOW_ANONYMOUS_LOGIN = False
 XMPP_ALLOW_PLAIN_LOGIN = True
 XMPP_ALLOW_WEBUSER_LOGIN = False
 
-XMPP_TLS_CERT_PATH = os.path.join(BASE_DIR, 'fullchain1.pem')
-XMPP_TLS_PRIV_KEY_PATH = os.path.join(BASE_DIR, 'privkey1.pem')
+XMPP_TLS_CERT_PATH = os.path.join(BASE_DIR, 'cert.pem')
+XMPP_TLS_PRIV_KEY_PATH = os.path.join(BASE_DIR, 'key.pem')

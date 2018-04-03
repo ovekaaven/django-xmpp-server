@@ -8,7 +8,6 @@ build
 
 # sample project
 env
-*.pem
 db.sqlite3
 
 # symlinks I use for testing
