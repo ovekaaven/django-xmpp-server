@@ -110,14 +110,14 @@ class Presence(object):
         if not self.available:
             return
         await self.stream.ipc_send('presence.available',
-                                   JID(xml.attrib['from']),
+                                   JID(xml.attrib['to']),
                                    self.last_presence.xml)
 
     async def ipc_recv_unsubscribed(self, origin, ifrom, xml):
         if not self.available:
             return
         await self._send_unavailable(self.stream.boundjid,
-                                     JID(xml.attrib['from']))
+                                     JID(xml.attrib['to']))
 
     async def _send_unavailable(self, user, contact, xml=None):
         if xml is None:
